@@ -11,7 +11,7 @@ import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
-@SpringBootTest
+@SpringBootTest(properties = {"levelNumber=1"})
 @AutoConfigureMockMvc
 class LevelControllerTestGiven1 {
 
