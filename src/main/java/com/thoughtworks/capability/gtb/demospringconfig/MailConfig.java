@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import java.util.List;
+import java.util.Map;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -18,5 +21,11 @@ public class MailConfig {
     private int port;
 
     private String from;
+
+    private List<String> defaultRecipients;
+
+    private Map<String, Boolean> additionalHeaders;
+
+    private Credentials credentials;
 
 }
