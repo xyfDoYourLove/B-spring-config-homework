@@ -13,15 +13,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class LevelControllerTestBasic {
+class LevelControllerTestGiven1 {
 
   @Autowired
   MockMvc mockMvc;
 
   @Test
-  void should_return_basic_when_get_level_given_level_less_than_1() throws Exception {
+  void should_return_basic_when_get_level_given_level_equals_1() throws Exception {
     mockMvc.perform(get("/level"))
-            .andExpect(jsonPath("$", is("basic")));
+            .andExpect(jsonPath("$", is("advanced")));
   }
 
 }
